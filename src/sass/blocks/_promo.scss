@@ -1,7 +1,7 @@
 .promo {
 	min-height: 650px;
 	padding: 21px 0 93px 0;
-	background: url('../../img/main.jpg') center (center/cover) no-repeat;
+	background: url('../../img/main.jpg') center (center / cover) no-repeat;
 
 	&__wrapper {
 		display: flex;
@@ -16,7 +16,6 @@
 		line-height: 42px;
 		font-weight: 700;
 		text-transform: uppercase;
-		margin-top: 90px;
 	}
 
 	&__subheader {
@@ -32,7 +31,7 @@
 		display: flex;
 		justify-content: space-between;
 		margin-top: 66px;
-		width: 423px;
+		max-width: 423px;
 	}
 
 	&__icon {

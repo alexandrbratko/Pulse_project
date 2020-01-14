@@ -1,0 +1,178 @@
+@media (max-width: 1200px) {
+	.promo {
+		min-height: 630px;
+	}
+
+	.advantages {
+		padding: 60px 0 85px 0;
+	}
+}
+
+@media (max-width: 991px) {
+	.promo {
+		padding: 20px 20px 70px 20px;
+		background-position-x: 20%;
+
+		&__wrapper {
+			margin-top: 70px;
+		}
+	}
+
+	.advantages {
+		padding: 50px 5px 75px 5px;
+
+		&__wrapper {
+			margin-top: 60px;
+		}
+
+		&__descr {
+			margin-top: 24px;
+			font-size: 13px;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.title {
+		font-size: 26px;
+	}
+
+	.promo {
+		min-height: 400px;
+
+		&__wrapper {
+			align-items: center;
+			margin-top: 80px;
+		}
+
+		&__header {
+			font-size: 30px;
+			line-height: 30px;
+		}
+
+		&__subheader {
+			font-size: 17px;
+			line-height: 17px;
+			margin-top: 15px;
+		}
+	}
+
+	.header {
+		&__official {
+			display: none;
+		}
+
+		&__phone {
+			font-size: 16px;
+		}
+	}
+
+	.advantages {
+		padding: 50px 10px;
+
+		&__wrapper {
+			margin-top: 50px;
+		}
+
+		&__subtitle {
+			font-size: 16px;
+			margin-top: 30px;
+		}
+
+		&__descr {
+			font-size: 14px;
+			margin-top: 0;
+
+			a {
+				display: block;
+			}
+		}
+	}
+}
+
+@media (max-width: 575px) {
+	.title {
+		font-size: 24px;
+	}
+
+	.promo {
+		min-height: 380px;
+		padding: 20px 10px 60px 10px;
+		background-position-x: 100%;
+
+		&__header {
+			font-size: 24px;
+			line-height: 24px;
+		}
+
+		&__subheader {
+			font-size: 14px;
+			line-height: 14px;
+			margin-top: 12px;
+		}
+
+		&__icons {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		&__icon {
+			font-size: 12px;
+
+			img {
+				margin: 10px auto;
+			}
+		}
+
+		&__link {
+			font-size: 14px;
+		}
+
+		.button {
+			width: 270px;
+			margin-top: 65px;
+		}
+	}
+
+	.header {
+		&__logo {
+			img {
+				width: 90%;
+			}
+		}
+
+		&__phone {
+			font-size: 12px;
+		}
+
+		.button {
+			width: 120px;
+			font-size: 10px;
+			margin-top: 3px;
+		}
+	}
+
+	.advantages {
+		padding: 40px 0;
+
+		&__wrapper {
+			flex-direction: column;
+			align-items: center;
+			margin-top: 60px;
+
+		}
+
+		&__items {
+			width: 100%;
+			margin-bottom: 20px;
+		}
+
+		&__subtitle {
+			margin-top: 0px;
+		}
+
+		&__descr {
+			margin-top: 10px;
+		}
+	}
+}
