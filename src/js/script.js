@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  // Carousel
   $(".carousel__inner").slick({
     speed: 1200,
     prevArrow: `<button type="button" class="slick-prev">
@@ -17,6 +18,8 @@ $(document).ready(function() {
       }
     ]
   });
+
+  // Tabs
   $("ul.catalog__tabs").on("click", "li:not(.catalog__tab_active)", function() {
     $(this)
       .addClass("catalog__tab_active")
@@ -29,6 +32,7 @@ $(document).ready(function() {
       .addClass("catalog__content_active");
   });
 
+  // Tabs Slide
   function toggleSlide(item) {
     $(item).each(function(i) {
       $(this).on("click", function(e) {
@@ -44,4 +48,27 @@ $(document).ready(function() {
   }
   toggleSlide(".catalog-item__link");
   toggleSlide(".catalog-item__back");
+
+  // Modal window
+  // function to open a modal window when you click on the button to order a consultation
+  $("[data-modal=consultation]").on("click", function() {
+    $(".overlay, #consultation").fadeIn("slow");
+  });
+
+  // function to open a modal window when you click on the buy button
+  $(".button_mini").each(function(i) {
+    $(this).on("click", function() {
+      $("#order .modal__descr").text(
+        $(".catalog-item__subtitle")
+          .eq(i)
+          .text()
+      );
+      $(".overlay, #order").fadeIn("slow");
+    });
+  });
+
+  // function to close all modal window
+  $(".modal__close").on("click", function() {
+    $(".overlay, #consultation, #order, #thanks").fadeOut("slow");
+  });
 });
