@@ -71,4 +71,40 @@ $(document).ready(function() {
   $(".modal__close").on("click", function() {
     $(".overlay, #consultation, #order, #thanks").fadeOut("slow");
   });
+
+  // Add validate for form
+
+  function validateForms(form) {
+    $(form).validate({
+      rules: {
+        name: {
+          required: true,
+          minlength: 2
+        },
+        phone: {
+          required: true,
+          number: true
+        },
+        email: {
+          required: true,
+          email: true
+        }
+      },
+      messages: {
+        name: {
+          required: "Пожалуйста введите ваше имя",
+          minlength: jQuery.validator.format("Введите {0} символа!")
+        },
+        phone: "Пожалуйста введите ваш номер телефона",
+        email: {
+          required: "Пожалуйста укажите вашу почту",
+          email: "Ваш почтовый ящик должен иметь формат name@domain.com"
+        }
+      }
+    });
+  }
+
+  validateForms("#consultation-form form");
+  validateForms("#consultation form");
+  validateForms("#order form");
 });
