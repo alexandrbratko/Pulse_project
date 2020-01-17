@@ -82,8 +82,7 @@ $(document).ready(function() {
           minlength: 2
         },
         phone: {
-          required: true,
-          number: true
+          required: true
         },
         email: {
           required: true,
@@ -95,7 +94,9 @@ $(document).ready(function() {
           required: "Пожалуйста введите ваше имя",
           minlength: jQuery.validator.format("Введите {0} символа!")
         },
-        phone: "Пожалуйста введите ваш номер телефона",
+        phone: {
+          required: "Пожалуйста введите ваш номер телефона"
+        },
         email: {
           required: "Пожалуйста укажите вашу почту",
           email: "Ваш почтовый ящик должен иметь формат name@domain.com"
@@ -109,5 +110,24 @@ $(document).ready(function() {
   validateForms("#order form");
 
   //Add masked input
-  $("input[name=phone]").mask("+7 (999) 999-9999");
+  $("input[name=phone]").mask("+7 (999) 999-99-99");
+
+  // Add send mail
+  $("form").submit(function(e) {
+    e.preventDefault();
+    $.ajax({
+      type: "POST",
+      url: "mailer/smart.php",
+      data: $(this).serialize()
+    }).done(function() {
+      $(this)
+        .find("input")
+        .val("");
+      $("#consultation, #order").fadeOut();
+      $(".overlay, #thanks").fadeIn("slow");
+
+      $("form").trigger("reset");
+    });
+    return false;
+  });
 });
