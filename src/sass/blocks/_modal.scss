@@ -62,3 +62,14 @@
 #thanks {
 	display: none;
 }
+
+@media (max-width: 575px) {
+	.modal {
+		width: 100%;
+		padding: 34px 10px 34px 10px;
+
+		&__close {
+			right: 0%;
+		}
+	}
+}

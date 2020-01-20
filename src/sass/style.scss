@@ -1,11 +1,19 @@
+@import "libs/bootstrap-reboot.min";
+@import "libs/font";
+@import "libs/slick";
+@import "libs/animation";
+
+
 @import "base/variables";
+@import "base/animation";
 
 * {
 	font-family: "Museo Sans Cyrl", sans-serif;
 }
 
 .container {
-	max-width: 950px;
+	width: 950px;
+	max-width: 90%;
 	margin: 0 auto;
 }
 
@@ -21,5 +29,4 @@
 @import 'blocks/feed';
 @import 'blocks/footer';
 @import 'blocks/modal';
-
-@import "blocks/media";
+@import 'blocks/pageup';

@@ -25,3 +25,20 @@
 		margin-top: 25px;
 	}
 }
+
+@media (max-width: 767px) {
+	.feed-form {
+		margin-top: 32px;
+	}
+}
+
+@media (max-width: 575px) {
+
+	.feed-form {
+		width: 100%;
+
+		input {
+			width: 100%;
+		}
+	}
+}

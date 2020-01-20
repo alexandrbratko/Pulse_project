@@ -47,7 +47,6 @@
 		display: none;
 		justify-content: space-between;
 		flex-wrap: wrap;
-		margin-bottom: 20px;
 
 		&_active {
 			display: flex;
@@ -60,6 +59,7 @@
 		border: 2px solid #e8e8e8;
 		padding: 20px 20px 26px 20px;
 		overflow: hidden;
+		margin-bottom: 20px;
 
 		&__img {
 			display: block;
@@ -160,7 +160,7 @@
 				margin-left: 0;
 			}
 
-			li {
+			div {
 				position: relative;
 				color: #555555;
 				font-size: 14px;
@@ -193,6 +193,39 @@
 			&:hover {
 				color: $main-color;
 			}
+		}
+	}
+}
+
+@media (max-width: 1200px) {
+	.catalog {
+		padding-bottom: 80px;
+	}
+}
+
+@media (max-width: 767px) {
+	.catalog {
+		padding-bottom: 60px;
+
+		&__content {
+			justify-content: center;
+		}
+	}
+}
+
+@media (max-width: 575px) {
+	.catalog {
+		padding-bottom: 50px;
+
+		&__tabs {
+			margin-top: 40px;
+		}
+
+		&__tab {
+			max-width: 30%;
+			height: 40px;
+			font-size: 10px;
+			line-height: 36px;
 		}
 	}
 }

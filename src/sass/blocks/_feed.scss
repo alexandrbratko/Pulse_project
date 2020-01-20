@@ -3,11 +3,7 @@
 
 	&__item {
 		display: flex;
-		margin-top: 100px;
-
-		&:nth-child(2) {
-			margin-top: 70px;
-		}
+		margin-top: 70px;
 	}
 
 	&__img {
@@ -37,5 +33,61 @@
 		font-size: 16px;
 		font-weight: 300;
 		margin-top: 10px;
+	}
+}
+
+@media (max-width: 1200px) {
+	.feed {
+		padding-bottom: 64px;
+
+		&__item {
+			margin-top: 64px;
+		}
+	}
+}
+
+@media (max-width: 776px) {
+	.feed {
+		&__item {
+			margin-top: 60px;
+		}
+
+		&__img {
+			width: 160px;
+			height: 160px;
+		}
+
+		&__text {
+			padding-right: 0;
+			margin-left: 50px;
+		}
+
+		&__descr {
+			font-size: 14px;
+		}
+
+		br {
+			display: none;
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.feed {
+		padding-bottom: 50px;
+
+		&__item {
+			margin-top: 50px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+
+		&__text {
+			margin-top: 5px;
+			text-align: center;
+			margin-left: 0;
+		}
 	}
 }
