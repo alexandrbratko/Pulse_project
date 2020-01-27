@@ -2,6 +2,6 @@
 
 Использование:   flex-box,  
                  scss,
-                 jQuery,
-                 Gulp,
-                 Git
+                 jquery,
+                 gulp,
+                 git
